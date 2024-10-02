@@ -1,0 +1,19 @@
+{% extends 'padre.html' %}
+
+
+{% block box1 %}
+    <section class="page-section" id="services">
+        <div class="container px-4 px-lg-5">
+            
+            
+            <h2 class="text-center mt-0">Busqueda por numero de evento</h2>
+            <hr class="divider" />
+            <div class="row gx-4 gx-lg-5">
+                <form action=" {% url 'buscar_evento'%} " method="get">
+                    <p>Numero de evento :<input type="number" name="numero"></p>
+                    <button type="submit">Buscar</button>
+                </form>
+            </div>
+        </div>
+    </section>
+{% endblock box1 %}

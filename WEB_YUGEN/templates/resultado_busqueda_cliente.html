@@ -1,0 +1,32 @@
+{% extends 'padre.html' %}
+
+
+{% block box1 %}
+    <section class="page-section" id="services">
+        <div class="container px-4 px-lg-5">
+            
+            
+            <h2 class="text-center mt-0">Busqueda de clientes</h2>
+            <hr class="divider" />
+            <div class="row gx-4 gx-lg-5">
+                <p> Se busco el cliente con el nombre registrado : {{nombre_del_cliente}}</p>
+                
+                
+                {% if clientes %}
+                    <ul>
+                        {% for e in clientes %}
+                            <li> {{e.nombre}}</li>
+                            <li> {{e.apellido}}</li>
+                            <li> {{e.telefono}}</li>
+                            <li> {{e.email}}</li>
+                        {% endfor %}
+                            
+                    </ul>
+                {% else %}
+                    <p>No se encontro el cliente</p>
+                {% endif %}
+                    
+            </div>
+        </div>
+    </section>
+{% endblock box1 %}

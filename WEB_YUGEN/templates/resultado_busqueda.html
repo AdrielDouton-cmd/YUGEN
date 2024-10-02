@@ -1,0 +1,30 @@
+{% extends 'padre.html' %}
+
+
+{% block box1 %}
+    <section class="page-section" id="services">
+        <div class="container px-4 px-lg-5">
+            
+            
+            <h2 class="text-center mt-0">Busqueda por numero de evento</h2>
+            <hr class="divider" />
+            <div class="row gx-4 gx-lg-5">
+                <p> Se busco el evento con el numero registrado en : {{numero_de_evento}}</p>
+                
+                
+                {% if eventos %}
+                    <ul>
+                        
+                        {% for e in eventos %}
+                            <li> {{e.nombre_evento}}</li>
+                        {% endfor %}
+                            
+                    </ul>
+                {% else %}
+                    <p>No se encontraron eventos</p>
+                {% endif %}
+                    
+            </div>
+        </div>
+    </section>
+{% endblock box1 %}
